@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link, Router } from 'react-router-dom'
 
-import Resort from './Patron.js'
-import Patron from './Resort.js'
+import Patron from './Patron.js'
+import Resort from './Resort.js'
 
 class Home extends Component {
 
@@ -12,9 +12,10 @@ class Home extends Component {
   render(){
     return(
       <div>
-          <Patron />
+        HOME PAGE
+          <Patron patrons={this.props.patrons}/>
 
-          <Resort />
+          {/* <Resort /> */}
 
       </div>
     )
