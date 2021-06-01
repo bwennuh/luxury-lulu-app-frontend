@@ -12,9 +12,10 @@ class Home extends Component {
   render(){
     return(
       <div>
-          <Patron />
+        HOME PAGE
+          <Patron patrons={this.props.patrons}/>
 
-          <Resort />
+          <Resort resorts={this.props.resorts}/>
 
       </div>
     )
