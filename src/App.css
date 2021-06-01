@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,22 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.resort-card {
+  text-align: center;
+  border: #00691a solid 1px;
+  padding: 5px;
+  width: 500px;
+  height: 600px;
+  display: inline-grid;
+  margin: 25px;
+  box-shadow: 5px 5px #ffc67b, -5px -5px #2de7ff;
+}
+
+.resort-images {
+  padding: 20px;
+  height: 250px;
+  width: auto;
+  max-width: 450px;
 }
