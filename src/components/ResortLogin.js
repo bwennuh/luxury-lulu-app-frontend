@@ -40,7 +40,7 @@ class ResortLogin extends Component {
           <input onChange={(event) => this.setState({password: event.target.value})} type="text" placeholder="Enter password"/>
           <br></br>
 
-          <Link to='/resort-page'>
+          <Link to='/resort_view'>
             <button type='submit' id="login-button">Login</button>
           </Link>
 
