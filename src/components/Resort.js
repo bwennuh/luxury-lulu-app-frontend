@@ -9,7 +9,7 @@ class Resort extends Component {
     return(
       <div >
         <div id="Resort_view">
-         
+          RESORT VIEW
         </div>
 
         <div>
@@ -22,4 +22,6 @@ class Resort extends Component {
   }
 }
 
-export default Resort 
+
+export default Resort
+
