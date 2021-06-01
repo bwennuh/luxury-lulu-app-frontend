@@ -39,7 +39,7 @@ class PatronLogin extends Component {
           <br></br>
           <input onChange={(event) => this.setState({password: event.target.value})} type="text" placeholder="Enter password"/>
           <br></br>
-          <Link to='/patron_view'>
+          <Link to='/patron-view'>
             <button type='submit' id="login-button">Login</button>
           </Link>
 

@@ -86,11 +86,11 @@ class MainContainer extends Component {
             <ResortLogin />
           </Route>
 
-          <Route path='/resort_view'>
+          <Route path='/resort-view'>
             <Resort patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
           </Route>
 
-          <Route path='/patron_view'>
+          <Route path='/patron-view'>
             <Patron patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
           </Route>
 
