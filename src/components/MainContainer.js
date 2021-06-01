@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-// import { Switch, Route, Link, Router } from 'react-router-dom'
+import { Switch, Route, Link, Router } from 'react-router-dom'
 
 import Home from './Home.js'
 import Navbar from './Navbar.js'
+import Login from './Login.js'
+import PatronLogin from './PatronLogin.js'
+import ResortLogin from './ResortLogin.js'
+import Patron from './Patron.js'
+import Resort from './Resort.js'
 
 const BASE_URL = 'http://localhost:9292/'
-const patrons_URL = 'http://localhost:9292/patrons'
-const resorts_URL = 'http://localhost:9292/resorts'
-const excursions_URL = 'http://localhost:9292/excursions'
-const bookings_URL = 'http://localhost:9292/bookings'
+const patrons_URL = BASE_URL + 'patrons'
+const resorts_URL = BASE_URL + 'resorts'
+const excursions_URL = BASE_URL + 'excursions'
+const bookings_URL = BASE_URL + 'bookings'
 
 class MainContainer extends Component {
 
@@ -59,10 +64,36 @@ class MainContainer extends Component {
     return(
       <div>
         <h1>MAIN CONTAINER RENDERED</h1>
-          
-          <Navbar />
 
-          <Home patrons={this.state.patrons} />
+        <Navbar />
+
+        <Switch>
+
+          <Route exact path={['/', '/home']}>
+            <Home />
+          </Route>
+
+          <Route path='/login'>
+            <Login />
+          </Route>
+
+          <Route path='/patron-login'>
+            <PatronLogin />
+          </Route>
+
+          <Route path='/resort-login'>
+            <ResortLogin />
+          </Route>
+
+          <Route path='/resort_view'>
+            <Resort patrons={this.state.patrons} excursions={this.state.excursions}/>
+          </Route>
+
+          <Route path='/patron_view'>
+            <Patron resorts={this.state.resorts} excursions={this.state.excursions}/>
+          </Route>
+
+        </Switch>
 
       </div>
     )
