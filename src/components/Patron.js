@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { Switch, Route, Link, Router } from 'react-router-dom'
 
+import ResortCardContainer from './ResortCardContainer.js'
 
 class Patron extends Component {
 
   render(){
 
     return(
-      <div >
-        <div id="Patron_view">
-          PATRON PAGE
+      <div>
+
+        <div id="patron-view">
+          <h1>PATRON PAGE</h1>
         </div>
 
-        <div>
-          <h2>Current Patrons:</h2>
-          {/* {console.log(this.props.patrons)} */}
-          {this.props.patrons.map(patron => <p>{patron.patron_name}</p>)}
-        </div>
+        <ResortCardContainer resorts={this.props.resorts} />
 
       </div>
     )

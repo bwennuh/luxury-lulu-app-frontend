@@ -8,6 +8,8 @@ import PatronLogin from './PatronLogin.js'
 import ResortLogin from './ResortLogin.js'
 import Patron from './Patron.js'
 import Resort from './Resort.js'
+import ResortInfo from './ResortInfo.js'
+import BookResort from './BookResort.js'
 
 
 const BASE_URL = 'http://localhost:9292/'
@@ -92,6 +94,14 @@ class MainContainer extends Component {
 
           <Route path='/patron-view'>
             <Patron patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
+          </Route>
+
+          <Route path='/patron-view-booked-resort-info'>
+            <ResortInfo resorts={this.state.resorts} />
+          </Route>
+          
+          <Route path='/patron-view-book-new-resort'>
+            <BookResort resorts={this.state.resorts} />
           </Route>
 
         </Switch>
