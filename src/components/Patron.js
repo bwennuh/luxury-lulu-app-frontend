@@ -8,7 +8,7 @@ class Patron extends Component {
 
     return(
       <div >
-        <div id="home">
+        <div id="Patron_view">
           PATRON PAGE
         </div>
 

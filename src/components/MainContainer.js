@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import Home from './Home.js'
 import Navbar from './Navbar.js'
+import Resort from './Resort.js'
+import Patron from './Patron.js'
 
 const BASE_URL = 'http://localhost:9292/'
 const patrons_URL = 'http://localhost:9292/patrons'
@@ -62,7 +64,9 @@ class MainContainer extends Component {
           
           <Navbar />
 
-          <Home patrons={this.state.patrons} />
+          <Patron patrons={this.state.patrons} />
+
+          <Resort resorts={this.state.resorts} /> 
 
       </div>
     )

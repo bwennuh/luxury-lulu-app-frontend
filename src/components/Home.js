@@ -15,7 +15,7 @@ class Home extends Component {
         HOME PAGE
           <Patron patrons={this.props.patrons}/>
 
-          {/* <Resort /> */}
+          <Resort resorts={this.props.resorts}/>
 
       </div>
     )
