@@ -11,12 +11,12 @@ function Navbar() {
                    <div className = "links" id = {showLinks ? "hidden" : ""}>
                    <a href="/Home"> Home </a>
 
-                   <Link to="/patron_view">
-                   <a href="/Patron_view"> Traveler Login </a>
+                   <Link to="/patron-login">
+                   <a href="/Patron-login"> Traveler Login </a>
                    </Link> 
 
-                   <Link to="/resort_view">
-                   <a href="Resort_view">  Resort Login </a>
+                   <Link to="/resort-login">
+                   <a href="Resort-login">  Resort Login </a>
                    </Link>
 
                    </div>
