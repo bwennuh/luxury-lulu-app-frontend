@@ -1,6 +1,9 @@
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 export const ResortCard = (props) => {
+
+  const [resort, setResort] = useState(props.resort)
 
   function checkBookedStatus(){
     if (props.booked === true){
@@ -24,11 +27,10 @@ export const ResortCard = (props) => {
       </div>
       )
     }
-
   }
 
   return (
-      <div className="resort-card">
+      <div id={props.resort.id} className="resort-card">
 
           <div className="resort-card-header">
             <h2 className="resort-card-title">{props.resort.resort_name}</h2>
