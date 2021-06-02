@@ -3,12 +3,11 @@ import { Grid } from "@material-ui/core"
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
 export const ExcursionCards = (props) => {
-
-  return (
-
-    <div className="card">
-      <Grid item >
-        <Card className="text-center">
+    return (
+   
+        <div className="excursion_card">
+            <Grid item >
+        <Card className= "text-center">
           <CardBody>
             <CardTitle tag="h5">{props.excursion.excursion_name}</CardTitle>
             <CardSubtitle>{props.excursion.excursion_type}</CardSubtitle>
