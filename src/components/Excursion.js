@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
-
+import ExcursionCardContainer from './ExcursionCardContainer.js'
 
 class Excursion extends Component {
 
@@ -9,7 +8,7 @@ class Excursion extends Component {
     return(
       <div >
         <div id="Excursion_view">
-          EXCURSION LIST
+          <ExcursionCards/>
         </div>
 
         <div>
