@@ -7,7 +7,7 @@ class ExcursionCardContainer extends Component {
 
   render(){
     return(
-      <div >
+      <div>
         <div className="excursion-card-container">
           {this.props.excursions.map(excursion => <ExcursionCards key={excursion.id} excursion={excursion}/>)}
         </div>
