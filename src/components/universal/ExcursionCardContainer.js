@@ -18,7 +18,3 @@ class ExcursionCardContainer extends Component {
 
 export default ExcursionCardContainer
 
-// //         <div>
-// <h2>Lulu Luxury Amentities + Experiences</h2>
-// {this.props.excursions.map(excursion => <p>{excursion.excursion_name}</p>)}
-// </div>

@@ -6,7 +6,7 @@ import {Card, CardText, CardBody,CardTitle, CardSubtitle} from 'reactstrap';
 
     return (
    
-        <div className="card">
+        <div className="excursion_card">
             <Grid item >
         <Card className= "text-center">
           <CardBody>
