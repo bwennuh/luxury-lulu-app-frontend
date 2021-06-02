@@ -13,9 +13,10 @@ import {Card, CardText, CardBody,CardTitle, CardSubtitle} from 'reactstrap';
             <CardTitle tag="h5">{props.excursion.excursion_name}</CardTitle>
             <CardSubtitle>{props.excursion.excursion_type}</CardSubtitle>
             </CardBody>
-            <img width="100%" alt="" src ="https://cdn.shortpixel.ai/client/q_glossy,ret_img/https://www.socalsurflessons.com/home1/ocsurfsp/public_html/socalsurflessons/wp-content/uploads/2018/04/SAM_1673.jpg"/>
+            <img width="100%" alt="" src ={props.excursion.excursion_image_url}/>
             <CardBody>
             <CardText>{props.excursion.description}</CardText>
+            {/* {console.log(props)} */}
             <CardText>{props.excursion.most_popular}</CardText>
             <CardText>{props.excursion.reservation}</CardText>
           </CardBody>
