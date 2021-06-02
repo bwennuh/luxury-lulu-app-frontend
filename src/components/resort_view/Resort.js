@@ -20,13 +20,13 @@ class Resort extends Component {
         <div>
           <h2>Current Patrons:</h2>
           {/* {console.log(this.props.patrons)} */}
-          <PatronCardContainer patrons = {this.props.patrons}/>
+          <PatronCardContainer patrons={this.props.patrons} bookings={this.props.bookings}/>
         </div>
 
         <div>
           <h2>Excursion Schedule:</h2>
           {/* {console.log(this.props.patrons)} */}
-          <ExcursionCardContainer excursions = {this.props.excursions}
+          <ExcursionCardContainer excursions={this.props.excursions}
           />
         </div>
 
