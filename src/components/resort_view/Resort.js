@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ExcursionCardContainer from '../universal/ExcursionCardContainer'
 
 class Resort extends Component {
 
@@ -24,7 +25,8 @@ class Resort extends Component {
         <div>
           <h2>Excursion Schedule:</h2>
           {/* {console.log(this.props.patrons)} */}
-          {this.props.excursions.map(excursion => <p>{excursion.excursion_name}</p>)}
+          <ExcursionCardContainer excursions = {this.props.excursions}
+          />
         </div>
 
       </div>
