@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ExcursionCardContainer from '../universal/ExcursionCardContainer'
+import PatronCardContainer from './PatronCardContainer';
 
 class Resort extends Component {
 
@@ -19,7 +20,7 @@ class Resort extends Component {
         <div>
           <h2>Current Patrons:</h2>
           {/* {console.log(this.props.patrons)} */}
-          {this.props.patrons.map(patron => <p>{patron.patron_name}</p>)}
+          <PatronCardContainer patrons = {this.props.patrons}/>
         </div>
 
         <div>
@@ -35,5 +36,5 @@ class Resort extends Component {
 }
 
 
-export default Resort
+export default Resort 
 
