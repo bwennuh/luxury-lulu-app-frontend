@@ -10,6 +10,7 @@ import Patron from './patron_view/Patron.js'
 import Resort from './resort_view/Resort.js'
 import ResortInfo from './patron_view/ResortInfo.js'
 import BookResort from './patron_view/BookResort.js'
+import BookExcursion from './universal/BookExcursion.js'
 
 
 const BASE_URL = 'http://localhost:9292/'
@@ -102,6 +103,10 @@ class MainContainer extends Component {
           
           <Route path='/patron-view-book-new-resort'>
             <BookResort resorts={this.state.resorts} />
+          </Route>
+
+          <Route path='/resort-view-book-new-excursion'>
+            <BookExcursion excursions={this.state.excursions} />
           </Route>
 
         </Switch>
