@@ -13,19 +13,18 @@ class Resort extends Component {
         </div>
 
         <div>
-          <h2>Lulu Luxury Resorts</h2>
-          {this.props.resorts.map(resort => <p>{resort.resort_name}</p>)}
+          <h2>{this.props.resort.resort_name}</h2>
+          {/* {this.props.resorts.map(resort => <p>{resort.resort_name}</p>)} */}
         </div>
 
         <div>
           <h2>Current Patrons:</h2>
-          {/* {console.log(this.props.patrons)} */}
           <PatronCardContainer patrons={this.props.patrons} bookings={this.props.bookings}/>
         </div>
 
         <div>
           <h2>Excursion Schedule:</h2>
-          <ExcursionCardContainer excursions={this.props.excursions} bookings={this.props.bookings}/>
+          <ExcursionCardContainer excursions={this.props.excursions} bookings={this.props.bookings} allBookings={this.props.allBookings}/>
         </div>
 
       </div>

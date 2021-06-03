@@ -45,7 +45,7 @@
   height: 600px;
   display: inline-grid;
   margin: 25px;
-  box-shadow: 5px 5px #ffc67b, -5px -5px #2de7ff;
+  box-shadow: 10px 10px #ffc67b, -10px -10px #2de7ff;
 }
 
 .resort-images {
