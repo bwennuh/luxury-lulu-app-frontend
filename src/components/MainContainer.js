@@ -117,7 +117,7 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/resort-login'>
-            <ResortLogin patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} resortView={this.renderResortViewPage}/>
+            <ResortLogin patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} resortView={this.renderResortViewPage} allBookings={this.state.allBookings}/>
           </Route>
 
           <Route path='/resort-view'>
@@ -125,7 +125,7 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/patron-view'>
-            <Patron patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
+            <Patron patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} allBookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
           </Route>
 
           <Route path='/patron-view-booked-resort-info'>

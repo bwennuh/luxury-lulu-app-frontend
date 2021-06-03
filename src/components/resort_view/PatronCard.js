@@ -9,7 +9,9 @@ export const PatronCard = (props) => {
 
     <div className="patron_card">
       {/* <SoloPatron name={props.patron.patron_name} age={props.patron.age} payment_info={props.patron.payment_info} bookings={props.bookings} /> */}
-      {/* <SoloPatron name={props.patron.patron_name} age={props.patron.age} payment_info={props.patron.payment_info} bookings={props.bookings} /> */}
+
+      <SoloPatron name={props.patron.patron_name} age={props.patron.age} payment_info={props.patron.payment_info} bookings={props.bookings} />
+      
       <Grid item >
         <Card className="text-center">
           <CardBody>

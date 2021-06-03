@@ -28,7 +28,7 @@ export default function SimplePopover(props) {
   return (
     <div>
       <Button aria-describedby={id} variant="contained" color="primary" onClick={handleClick}>
-        Open Popover
+        See Excursion Info
       </Button>
       <Popover
         id={id}
@@ -46,9 +46,10 @@ export default function SimplePopover(props) {
       >
         <Typography className={classes.typography}>{props.name}</Typography>
         <Typography className={classes.typography}>
-          Reservation: {props.reservation}
+          Patron Reservation date: {props.reservation}
           <br></br>
-        Type: {props.type}
+          <br></br>
+          Type: {props.type}
         </Typography>
         {/* {props.bookings.map(booking => {
           return (

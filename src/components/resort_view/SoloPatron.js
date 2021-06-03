@@ -28,7 +28,7 @@ export default function SimplePopover(props) {
   return (
     <div>
       <Button aria-describedby={id} variant="contained" color="primary" onClick={handleClick}>
-        Open Popover
+        See Patron Info
       </Button>
       <Popover
         id={id}
@@ -45,17 +45,23 @@ export default function SimplePopover(props) {
         }}
       >
         <Typography className={classes.typography}>{props.name}</Typography>
-        <Typography className={classes.typography}>{props.payment_info}</Typography>
-        <Typography className={classes.typography}>{props.age}</Typography>
-        { props.bookings.map(booking => {
-        return(
         <Typography className={classes.typography}>
-        Start date: {booking.start_date}
-        End date: {booking.end_date}
-        Room type: {booking.room_type}
+          {props.payment_info === false ? "Not paid" : "Paid"}
         </Typography>
-  )
-})}
+        <Typography className={classes.typography}>Age: {props.age}</Typography>
+        {props.bookings.map(booking => {
+          return (
+            <Typography className={classes.typography}>
+              Start date: {booking.start_date}
+              <br></br>
+              <br></br>
+              End date: {booking.end_date}
+              <br></br>
+              <br></br>
+              Room type: {booking.room_type}
+            </Typography>
+          )
+        })}
       </Popover>
     </div>
   );

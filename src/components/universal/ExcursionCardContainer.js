@@ -3,8 +3,6 @@ import { ExcursionCards } from './ExcursionCards';
 
 class ExcursionCardContainer extends Component {
 
-
-
   render() {
     return (
       <div>

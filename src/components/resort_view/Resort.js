@@ -13,7 +13,7 @@ class Resort extends Component {
         </div>
 
         <div>
-          <h2>Lulu Luxury Resorts</h2>
+          <h2>{this.props.resort.resort_name}</h2>
           {/* {this.props.resorts.map(resort => <p>{resort.resort_name}</p>)} */}
         </div>
 
