@@ -77,6 +77,10 @@ class MainContainer extends Component {
     })
   }
 
+  addmember = patron => this.setState({
+    patrons: [...this.state.patrons, patron]
+    })
+
   render(){
     return(
       <div>
@@ -95,7 +99,7 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/patron-login'>
-            <PatronLogin patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} patronView={this.renderPatronViewPage}/>
+            <PatronLogin addmember = {this.addmember}  patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} patronView={this.renderPatronViewPage}/>
           </Route>
 
           <Route path='/resort-login'>

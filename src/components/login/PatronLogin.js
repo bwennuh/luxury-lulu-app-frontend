@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 // import DelayLink from 'react-delay-link'
 
 import Patron from '../patron_view/Patron.js'
+import MemberForm from '../patron_view/MemberForm.js'
 
 class PatronLogin extends Component {
 
@@ -100,6 +101,8 @@ class PatronLogin extends Component {
 
           </form>
 
+          <h3>Not a member? Register below</h3>
+          <MemberForm addmember = {this.props.addmember}/>
         </div>
 
       </div>
