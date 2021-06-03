@@ -15,7 +15,8 @@ class ResortCardContainer extends Component {
 
         <div className="booked-resorts-card-container">
           <h1>Upcoming reservations:</h1>
-          {this.props.resorts.map(resort => <ResortCard key={resort.id} id={resort.id} resort={resort} booked={!this.state.booked}/>)}
+          {this.props.bookedResorts.map(resort => <ResortCard key={resort.id} id={resort.id} resort={resort} booked={!this.state.booked}/>)}
+
         </div>
 
         <div className="available-resorts-card-container">
