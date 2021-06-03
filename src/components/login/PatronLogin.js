@@ -96,7 +96,7 @@ class PatronLogin extends Component {
 
             <br></br>
             {/* <Link to='/patron-view'> */}
-            <button type='submit' id="login-button">Login</button>
+              <button type='submit' id="login-button">Login</button>
             {/* </Link> */}
 
           </form>
