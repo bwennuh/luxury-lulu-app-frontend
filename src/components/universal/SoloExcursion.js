@@ -46,18 +46,18 @@ export default function SimplePopover(props) {
       >
         <Typography className={classes.typography}>{props.name}</Typography>
         <Typography className={classes.typography}>
-        Reservation: {props.reservation}
-        <br></br> 
+          Reservation: {props.reservation}
+          <br></br>
         Type: {props.type}
         </Typography>
-        { props.bookings.map(booking => {
-        return(
+        {/* {props.bookings.map(booking => {
+          return (
             <Typography className={classes.typography}>
-            Start date: {booking.start_date}
+              Start date: {booking.start_date}
             End date: {booking.end_date}
             </Typography>
-  )
-})}
+          )
+        })} */}
       </Popover>
     </div>
   );

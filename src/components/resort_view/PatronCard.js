@@ -2,12 +2,14 @@ import React from 'react'
 import { Grid } from "@material-ui/core"
 import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import SoloPatron from './SoloPatron.js'
+
 export const PatronCard = (props) => {
 
   return (
 
     <div className="patron_card">
-      <SoloPatron name = {props.patron.patron_name} age = {props.patron.age} payment_info = {props.patron.payment_info} bookings = {props.bookings}/> 
+      {/* <SoloPatron name={props.patron.patron_name} age={props.patron.age} payment_info={props.patron.payment_info} bookings={props.bookings} /> */}
+      {/* <SoloPatron name={props.patron.patron_name} age={props.patron.age} payment_info={props.patron.payment_info} bookings={props.bookings} /> */}
       <Grid item >
         <Card className="text-center">
           <CardBody>
@@ -24,7 +26,7 @@ export const PatronCard = (props) => {
                   <CardText>End date: {booking.end_date}</CardText>
                   
                 </CardBody> */}
-              {/* )
+            {/* )
             })} */}
             {/* <CardText>{props.bookings.end_date}</CardText>
             <CardText>{props.bookings.room_type}</CardText> */}

@@ -3,17 +3,15 @@ import { PatronCard } from './PatronCard.js';
 
 class PatronCardContainer extends Component {
 
-
-
   render() {
-
-    // console.log(this.props.bookings)
 
     return (
       <div >
+
         <div className="patron-card-container">
 
-          {this.props.patrons.map(patron => {
+          {this.props.patrons.map(patron => <PatronCard key={patron.id} id={patron.id} patron={patron} />)}
+          {/* {this.props.patrons.map(patron => {
 
             let patronBookings = this.props.bookings.filter(booking => booking.patron_id == patron.id)
 
@@ -24,18 +22,10 @@ class PatronCardContainer extends Component {
                 bookings={patronBookings}
               />
             )
-          })}
+          })} */}
 
-          {/* {this.props.patrons.map(patron => {
-            return (
-            <PatronCard 
-            key={patron.id} 
-            patron={patron} 
-            bookings={this.props.bookings}
-            />
-    )
-})} */}
         </div>
+
       </div>
     )
   }
