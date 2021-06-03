@@ -106,10 +106,6 @@ class MainContainer extends Component {
             <Resort patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} />
           </Route>
 
-          {/* <Route path='/patron-view'>
-            <Patron patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} />
-          </Route> */}
-
           <Route path='/patron-view'>
             <Patron patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
           </Route>
