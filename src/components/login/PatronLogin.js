@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+// import DelayLink from 'react-delay-link'
 
 import Patron from '../patron_view/Patron.js'
 
@@ -58,7 +59,6 @@ class PatronLogin extends Component {
     })
     let filteredResorts = [...new Set(patronResorts)]
     this.setState({ resorts: filteredResorts })
-    console.log(patronResorts)
     console.log(filteredResorts)
 
     let patronExcursions = patronBookings.map(booking => {
@@ -67,18 +67,10 @@ class PatronLogin extends Component {
     let filteredExcursions = [...new Set(patronExcursions)]
 
     this.setState({ excursions: filteredExcursions })
-    console.log(patronExcursions)
     console.log(filteredExcursions)
 
-    this.renderPatronPage()
+    this.props.patronView(loginPatron, patronBookings, filteredResorts, filteredExcursions)
   }
-
-  renderPatronPage = () => {
-    return (
-      <Patron patron={this.state.patron} bookings={this.state.bookings} resorts={this.state.resorts} excursions={this.state.excursions} />
-    )
-  }
-
 
   render() {
     return (
@@ -95,9 +87,16 @@ class PatronLogin extends Component {
             <input onChange={(event) => this.setState({ password: event.target.value })} type="text" placeholder="Enter password" />
 
             <br></br>
-            {/* <Link to='/patron-view'> */}
+
+            {/* <DelayLink delay={1000} to='/patron-view'>
               <button type='submit' id="login-button">Login</button>
-            {/* </Link> */}
+            </DelayLink> */}
+
+            <button type='submit' id="login-button">Login</button>
+
+            <Link to='/patron-view'>
+              <button id="profile">Go to profile</button>
+            </Link>
 
           </form>
 
