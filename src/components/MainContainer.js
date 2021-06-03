@@ -46,26 +46,26 @@ class MainContainer extends Component {
 
   fetchPatrons = () => {
     fetch(patrons_URL)
-    .then(resp => resp.json())
-    .then(patrons => this.setState({allPatrons: patrons.patrons}))
+      .then(resp => resp.json())
+      .then(patrons => this.setState({ allPatrons: patrons.patrons }))
   }
 
   fetchResorts = () => {
     fetch(resorts_URL)
-    .then(resp => resp.json())
-    .then(resorts => this.setState({allResorts: resorts.resorts}))
+      .then(resp => resp.json())
+      .then(resorts => this.setState({ allResorts: resorts.resorts }))
   }
 
   fetchExcursions = () => {
     fetch(excursions_URL)
-    .then(resp => resp.json())
-    .then(excursions => this.setState({allExcursions: excursions.excursions}))
+      .then(resp => resp.json())
+      .then(excursions => this.setState({ allExcursions: excursions.excursions }))
   }
 
   fetchBookings = () => {
     fetch(bookings_URL)
-    .then(resp => resp.json())
-    .then(bookings => this.setState({allBookings: bookings.bookings}))
+      .then(resp => resp.json())
+      .then(bookings => this.setState({ allBookings: bookings.bookings }))
   }
 
   renderPatronViewPage = (patron, bookings, resorts, excursions) => {
@@ -78,11 +78,12 @@ class MainContainer extends Component {
   }
 
   addmember = patron => this.setState({
-    patrons: [...this.state.patrons, patron]
-    })
+    ...this.state,
+    allPatrons: [...this.state.patrons, patron]
+  })
 
-  render(){
-    return(
+  render() {
+    return (
       <div>
         <h1>MAIN CONTAINER RENDERED</h1>
 
@@ -99,7 +100,7 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/patron-login'>
-            <PatronLogin addmember = {this.addmember}  patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} patronView={this.renderPatronViewPage}/>
+            <PatronLogin addmember={this.addmember} patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} patronView={this.renderPatronViewPage} />
           </Route>
 
           <Route path='/resort-login'>
@@ -117,7 +118,7 @@ class MainContainer extends Component {
           <Route path='/patron-view-booked-resort-info'>
             <ResortInfo resorts={this.state.allResorts} />
           </Route>
-          
+
           <Route path='/patron-view-book-new-resort'>
             <BookResort resorts={this.state.allResorts} />
           </Route>
