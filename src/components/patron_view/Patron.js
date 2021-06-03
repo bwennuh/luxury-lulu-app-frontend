@@ -15,8 +15,8 @@ class Patron extends Component {
           <h1>PATRON PAGE</h1>
         </div>
 
-        <ResortCardContainer resorts={this.props.resorts} bookings={this.props.bookings}/>
-        <ExcursionCardContainer excursions ={this.props.excursions} bookings={this.props.bookings}/>
+        <ResortCardContainer bookedResorts={this.props.bookedResorts} resorts={this.props.resorts} bookings={this.props.bookings}/>
+        <ExcursionCardContainer excursions={this.props.excursions} bookings={this.props.bookings}/>
 
       </div>
     )

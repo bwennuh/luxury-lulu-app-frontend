@@ -22,11 +22,15 @@ const bookings_URL = BASE_URL + 'bookings'
 class MainContainer extends Component {
 
   state = {
-    resorts: [],
-    patrons: [],
-    excursions: [],
-    bookings: [],
-    display: ""
+    allResorts: [],
+    allPatrons: [],
+    allExcursions: [],
+    allBookings: [],
+    display: "",
+    loginPatron: {},
+    loginPatronBookings: [],
+    loginPatronResorts: [],
+    loginPatronExcursions: []
   }
 
   componentDidMount() {
@@ -43,25 +47,34 @@ class MainContainer extends Component {
   fetchPatrons = () => {
     fetch(patrons_URL)
     .then(resp => resp.json())
-    .then(patrons => this.setState({patrons: patrons.patrons}))
+    .then(patrons => this.setState({allPatrons: patrons.patrons}))
   }
 
   fetchResorts = () => {
     fetch(resorts_URL)
     .then(resp => resp.json())
-    .then(resorts => this.setState({resorts: resorts.resorts}))
+    .then(resorts => this.setState({allResorts: resorts.resorts}))
   }
 
   fetchExcursions = () => {
     fetch(excursions_URL)
     .then(resp => resp.json())
-    .then(excursions => this.setState({excursions: excursions.excursions}))
+    .then(excursions => this.setState({allExcursions: excursions.excursions}))
   }
 
   fetchBookings = () => {
     fetch(bookings_URL)
     .then(resp => resp.json())
-    .then(bookings => this.setState({bookings: bookings.bookings}))
+    .then(bookings => this.setState({allBookings: bookings.bookings}))
+  }
+
+  renderPatronViewPage = (patron, bookings, resorts, excursions) => {
+    this.setState({
+      loginPatron: patron,
+      loginPatronBookings: bookings,
+      loginPatronResorts: resorts,
+      loginPatronExcursions: excursions
+    })
   }
 
   addmember = patron => this.setState({
@@ -86,32 +99,35 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/patron-login'>
-            <PatronLogin addmember = {this.addmember} patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
+            <PatronLogin addmember = {this.addmember}  patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} patronView={this.renderPatronViewPage}/>
           </Route>
 
           <Route path='/resort-login'>
-            <ResortLogin patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
+            <ResortLogin patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} />
           </Route>
 
           <Route path='/resort-view'>
-            <Resort patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
+            <Resort patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} />
           </Route>
 
+          {/* <Route path='/patron-view'>
+            <Patron patrons={this.state.allPatrons} resorts={this.state.allResorts} excursions={this.state.allExcursions} bookings={this.state.allBookings} />
+          </Route> */}
+
           <Route path='/patron-view'>
-            {/* <Patron patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} /> */}
-            <Patron />
+            <Patron patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
           </Route>
 
           <Route path='/patron-view-booked-resort-info'>
-            <ResortInfo resorts={this.state.resorts} />
+            <ResortInfo resorts={this.state.allResorts} />
           </Route>
           
           <Route path='/patron-view-book-new-resort'>
-            <BookResort resorts={this.state.resorts} />
+            <BookResort resorts={this.state.allResorts} />
           </Route>
 
           <Route path='/resort-view-book-new-excursion'>
-            <BookExcursion excursions={this.state.excursions} />
+            <BookExcursion excursions={this.state.allExcursions} />
           </Route>
 
         </Switch>
