@@ -64,6 +64,10 @@ class MainContainer extends Component {
     .then(bookings => this.setState({bookings: bookings.bookings}))
   }
 
+  addmember = patron => this.setState({
+    patrons: [...this.state.patrons, patron]
+    })
+
   render(){
     return(
       <div>
@@ -82,7 +86,7 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/patron-login'>
-            <PatronLogin patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
+            <PatronLogin addmember = {this.addmember} patrons={this.state.patrons} resorts={this.state.resorts} excursions={this.state.excursions} bookings={this.state.bookings} />
           </Route>
 
           <Route path='/resort-login'>
