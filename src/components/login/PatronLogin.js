@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-// import DelayLink from 'react-delay-link'
 
 import Patron from '../patron_view/Patron.js'
 import MemberForm from '../patron_view/MemberForm.js'
@@ -49,28 +48,34 @@ class PatronLogin extends Component {
 
     let loginPatron = patrons.find(patron => patron.patron_name === patronUsername)
     this.setState({ patron: loginPatron })
-    console.log(loginPatron)
+    
+    if(loginPatron){
+      alert('We have found your account and reservations! Please click "Go to profile" to continue!')
+      console.log(loginPatron)
 
-    let patronBookings = bookings.filter(booking => booking.patron_id === loginPatron.id)
-    this.setState({ bookings: patronBookings })
-    console.log(patronBookings)
-
-    let patronResorts = patronBookings.map(booking => {
-      return (resorts.find(resort => resort.id === booking.resort_id))
-    })
-    let filteredResorts = [...new Set(patronResorts)]
-    this.setState({ resorts: filteredResorts })
-    console.log(filteredResorts)
-
-    let patronExcursions = patronBookings.map(booking => {
-      return (excursions.find(excursion => excursion.id === booking.excursion_id))
-    })
-    let filteredExcursions = [...new Set(patronExcursions)]
-
-    this.setState({ excursions: filteredExcursions })
-    console.log(filteredExcursions)
-
-    this.props.patronView(loginPatron, patronBookings, filteredResorts, filteredExcursions)
+      let patronBookings = bookings.filter(booking => booking.patron_id === loginPatron.id)
+      this.setState({ bookings: patronBookings })
+      console.log(patronBookings)
+  
+      let patronResorts = patronBookings.map(booking => {
+        return (resorts.find(resort => resort.id === booking.resort_id))
+      })
+      let filteredResorts = [...new Set(patronResorts)]
+      this.setState({ resorts: filteredResorts })
+      console.log(filteredResorts)
+  
+      let patronExcursions = patronBookings.map(booking => {
+        return (excursions.find(excursion => excursion.id === booking.excursion_id))
+      })
+      let filteredExcursions = [...new Set(patronExcursions)]
+  
+      this.setState({ excursions: filteredExcursions })
+      console.log(filteredExcursions)
+  
+      this.props.patronView(loginPatron, patronBookings, filteredResorts, filteredExcursions)
+    } else {
+      alert("There is no one with that name in our database. Please try again, or feel free to register to the app below!")
+    }
   }
 
   render() {
@@ -88,10 +93,6 @@ class PatronLogin extends Component {
             <input onChange={(event) => this.setState({ password: event.target.value })} type="text" placeholder="Enter password" />
 
             <br></br>
-
-            {/* <DelayLink delay={1000} to='/patron-view'>
-              <button type='submit' id="login-button">Login</button>
-            </DelayLink> */}
 
             <button type='submit' id="login-button">Login</button>
 
