@@ -11,7 +11,7 @@ class BookResort extends Component {
 
     return(
       <div>
-        <h1>Big Resort Booking Info Page Here:</h1>
+        <h1>Book a new resort:</h1>
 
       </div>
     )
