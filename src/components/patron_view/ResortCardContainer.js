@@ -25,19 +25,19 @@ class ResortCardContainer extends Component {
     this.props.updateBookings(deletedBooking)
   }
 
-  // bookRes = (singleResort, singlePatron) => {
-  //   let newBooking = this.props.bookings.filter(booking => booking.resort_id === singleResort.id)
+  bookRes = (singleResort, singlePatron) => {
+    let newBooking = this.props.bookings.filter(booking => booking.resort_id === singleResort.id)
 
-  //   alert("You have booked a new reservation. We hope you enjoy your trip! Please log in again to see your new reservation information.")
+    alert("You have booked a new reservation. We hope you enjoy your trip! Please log in again to see your new reservation information.")
 
-  //   console.log(singlePatron)
-  //   console.log(singlePatron.id)
-  //   console.log(newBooking)
-  //   // newBooking[0].patron_id = singlePatron.id
+    // console.log(singlePatron)
+    // console.log(singlePatron.id)
+    // console.log(newBooking)
+    // newBooking[0].patron_id = singlePatron.id
 
-  //   // console.log(newBooking)
+    // console.log(newBooking)
 
-  // }
+  }
 
   render(){
 

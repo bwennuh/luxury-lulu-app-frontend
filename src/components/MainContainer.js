@@ -39,7 +39,6 @@ class MainContainer extends Component {
 
   componentDidMount() {
     this.fetchAllData()
-    console.log(this.state)
   }
 
   fetchAllData = () => {
@@ -141,28 +140,19 @@ class MainContainer extends Component {
 
   updateBookings = (deletedBooking) => {
     console.log(this.state.loginPatronBookings)
-    alert("Updating bookings!")
+    console.log("Check this!")
+
+    console.log(deletedBooking)
+
     let newLoginPatronBookings = this.state.loginPatronBookings.filter(booking => booking !== deletedBooking)
     this.setState({
       loginPatronBookings: newLoginPatronBookings
     })
+
     console.log(this.state.loginPatronBookings)
     // this.updateBookingsDatabase(newLoginPatronBookings)
-    this.updateBookingsDatabase(deletedBooking)
+    // this.updateBookingsDatabase(deletedBooking)
   }
-
-  // updateBookingsDatabase = (bookings) => {
-
-  //   const reqObj = {
-  //     headers: {"Content-Type": "application/json"},
-  //     method: "PATCH",
-  //     body: JSON.stringify(bookings)
-  //   }
-
-  //   fetch(bookings_URL, reqObj)
-  //     .then(r => r.json())
-  //     // .then(() => this.setState({ loginPatronBookings: updatedBookingsArray}))
-  // }
 
   updateBookingsDatabase = (booking) => {
 
@@ -175,7 +165,7 @@ class MainContainer extends Component {
       body: JSON.stringify(booking)
     }
 
-    fetch(bookings_URL+booking.id, reqObj)
+    fetch(bookings_URL+'/'+booking.id, reqObj)
       .then(r => r.json())
       // .then(() => this.setState({ loginPatronBookings: updatedBookingsArray}))
   }
