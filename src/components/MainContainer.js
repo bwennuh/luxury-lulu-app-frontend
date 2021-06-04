@@ -39,6 +39,7 @@ class MainContainer extends Component {
 
   componentDidMount() {
     this.fetchAllData()
+    console.log(this.state)
   }
 
   fetchAllData = () => {
@@ -51,7 +52,7 @@ class MainContainer extends Component {
   fetchPatrons = () => {
     fetch(patrons_URL)
       .then(resp => resp.json())
-      .then(patrons => this.setState({ allPatrons: patrons.patrons }))
+      .then(patrons => this.setState({ allPatrons: patrons }))
   }
 
   fetchResorts = () => {
@@ -99,6 +100,7 @@ class MainContainer extends Component {
     return (
       <div>
         <h1>MAIN CONTAINER RENDERED</h1>
+        
 
         <Navbar />
 
