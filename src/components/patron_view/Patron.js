@@ -25,7 +25,7 @@ class Patron extends Component {
 
         {/* <ResortCardContainer patronId={this.props.patron.id} deleteRes={this.props.deleteRes} bookedResorts={this.props.bookedResorts} resorts={this.props.resorts} bookings={this.props.bookings} checkResorts={this.checkResorts} /> */}
 
-        <ResortCardContainer patronId={this.props.patron.id} deleteRes={this.props.deleteRes} bookedResorts={this.props.bookedResorts} resorts={this.props.resorts} bookings={this.checkResorts()} checkResorts={this.checkResorts} />
+        <ResortCardContainer patron={this.props.patron} patronId={this.props.patron.id} deleteRes={this.props.deleteRes} bookedResorts={this.props.bookedResorts} resorts={this.props.resorts} bookings={this.checkResorts()} checkResorts={this.checkResorts} updateBookings={this.props.updateBookings} />
 
         <ExcursionCardContainer excursions={this.props.excursions} bookings={this.props.bookings} allBookings={this.props.allBookings}/>
 

@@ -39,9 +39,9 @@ export const ResortCard = (props) => {
     } else {
       return(
       <div className="resort-card-footer">
-        <Link to='/patron-view-book-new-resort'>
-          <button className="review-resort-button">Book Resort</button>
-        </Link>
+        {/* <Link to='/patron-view-book-new-resort'> */}
+          <button onClick={() => props.bookRes(props.resort.id, props.patron)} className="review-resort-button">Book Resort</button>
+        {/* </Link> */}
       </div>
       )
     }

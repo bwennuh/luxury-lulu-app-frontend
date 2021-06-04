@@ -139,6 +139,47 @@ class MainContainer extends Component {
 
   // }
 
+  updateBookings = (deletedBooking) => {
+    console.log(this.state.loginPatronBookings)
+    alert("Updating bookings!")
+    let newLoginPatronBookings = this.state.loginPatronBookings.filter(booking => booking !== deletedBooking)
+    this.setState({
+      loginPatronBookings: newLoginPatronBookings
+    })
+    console.log(this.state.loginPatronBookings)
+    // this.updateBookingsDatabase(newLoginPatronBookings)
+    this.updateBookingsDatabase(deletedBooking)
+  }
+
+  // updateBookingsDatabase = (bookings) => {
+
+  //   const reqObj = {
+  //     headers: {"Content-Type": "application/json"},
+  //     method: "PATCH",
+  //     body: JSON.stringify(bookings)
+  //   }
+
+  //   fetch(bookings_URL, reqObj)
+  //     .then(r => r.json())
+  //     // .then(() => this.setState({ loginPatronBookings: updatedBookingsArray}))
+  // }
+
+  updateBookingsDatabase = (booking) => {
+
+    const reqObj = {
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      method: "PATCH",
+      body: JSON.stringify(booking)
+    }
+
+    fetch(bookings_URL+booking.id, reqObj)
+      .then(r => r.json())
+      // .then(() => this.setState({ loginPatronBookings: updatedBookingsArray}))
+  }
+
 
   render() {
     return (
@@ -171,7 +212,7 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/patron-view'>
-            <Patron deleteRes={this.deleteRes} patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} allBookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
+            <Patron deleteRes={this.deleteRes} updateBookings={this.updateBookings} patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} allBookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
           </Route>
 
           <Route path='/patron-view-booked-resort-info'>
