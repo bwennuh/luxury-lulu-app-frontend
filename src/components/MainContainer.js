@@ -96,6 +96,18 @@ class MainContainer extends Component {
     allPatrons: [...this.state.patrons, patron]
   })
 
+  deleteRes = (singleResort) => {
+    let updatedAvailability = this.state.allBookings.map(booking => {
+      if(booking.resort_id === singleResort.id){
+        return singleResort
+      } else {
+        return booking
+      }
+    })
+
+    (updatedAvailability)
+  }
+
   render() {
     return (
       <div>
@@ -127,7 +139,7 @@ class MainContainer extends Component {
           </Route>
 
           <Route path='/patron-view'>
-            <Patron patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} allBookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
+            <Patron deleteRes={this.deleteRes} patron={this.state.loginPatron} bookedResorts={this.state.loginPatronResorts} excursions={this.state.loginPatronExcursions} bookings={this.state.loginPatronBookings} allBookings={this.state.loginPatronBookings} resorts={this.state.allResorts} />
           </Route>
 
           <Route path='/patron-view-booked-resort-info'>
