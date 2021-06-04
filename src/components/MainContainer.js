@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route, Link, Router } from 'react-router-dom'
+import FlightIcon from '@material-ui/icons/Flight';
 
 import Home from './Home.js'
 import Navbar from './Navbar.js'
@@ -110,11 +111,10 @@ class MainContainer extends Component {
 
   render() {
     return (
-      <div>
-        <h1>MAIN CONTAINER RENDERED</h1>
-        
-
-        <Navbar />
+      <div className="homepage_text">
+        <h1 className="rightSide">
+                < FlightIcon/></h1>
+        <Navbar/>
 
         <Switch>
 
@@ -155,6 +155,7 @@ class MainContainer extends Component {
           </Route>
 
         </Switch>
+
 
       </div>
     )

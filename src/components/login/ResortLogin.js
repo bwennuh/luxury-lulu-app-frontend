@@ -77,12 +77,12 @@ class ResortLogin extends Component {
 
   render(){
     return(
-      <div>
-        <h1>RESORT LOGIN PAGE</h1>
+      <div className="resort_login_container">
+        <h1 className="resort_homepage">Welcome to your Resort Homepage</h1>
 
         <div id="login-form">
 
-        <h1>Enter Login Info:</h1>
+        <h1 className="enter_resort_info">Enter Login Info:</h1>
         <form onSubmit={this.submitHandler}>
 
           <input onChange={(event) => this.setState({username: event.target.value})} type="text" placeholder="Enter your username"/>
