@@ -93,7 +93,7 @@ class MainContainer extends Component {
 
   addmember = patron => this.setState({
     ...this.state,
-    allPatrons: [...this.state.patrons, patron]
+    allPatrons: [...this.state.allPatrons, patron]
   })
 
   // deleteRes = (singleResort) => {
