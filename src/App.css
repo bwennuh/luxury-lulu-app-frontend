@@ -37,15 +37,24 @@
   }
 } */
 
+
+/* theme colors 
+#8D8741 - olive green 
+#659DBD - blue 
+#DAAD86 - peachy tan 
+#BC986A - light brown 
+#FBEEC1 - tan  */
+
 .resort-card {
   text-align: center;
-  border: #00691a solid 1px;
+  border: #659DBD solid 6px;
   padding: 5px;
   width: 500px;
-  height: 600px;
+  height: 700px;
   display: inline-grid;
   margin: 25px;
-  box-shadow: 10px 10px #ffc67b, -10px -10px #2de7ff;
+  box-shadow: 10px 10px #DAAD86, -10px -10px #8D8741;
+
 }
 
 .resort-images {
@@ -54,3 +63,135 @@
   width: auto;
   max-width: 450px;
 }
+
+.excursion_card {
+  text-align: center;
+  border: #659DBD solid 6px;
+  padding: 5px;
+  width: 500px;
+  height: 700px;
+  display: inline-grid;
+  margin: 25px;
+  box-shadow: 10px 10px #DAAD86, -10px -10px #8D8741;
+  color: #8D8741;
+}
+
+.excursion_img {
+  padding: 20px;
+  height: 250px;
+  width: auto;
+  max-width: 450px;
+}
+
+.excursion_info {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.homepage {
+  /* margin: 0; */
+  padding: 2em; 
+  height: 130vh;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+  background-image: url('https://media.cntraveler.com/photos/53dad07e6dec627b14a04855/master/w_1024,h_768,c_limit/four-seasons-bali-at-jimbaran-bay-bali-jimbaran-indonesia-108728-2.jpg')
+}
+
+.Navbar {
+  font-display: #DAAD86;
+  font-size: 25px;
+  margin-left: 15px;
+  margin-right: 15px
+}
+
+.homepage_text {
+  font-family: Satsify;
+  font-size: medium;
+  color:white;
+}
+
+.form {
+  margin:50px 0px; padding:0px;
+  text-align:center;
+  align-content:center;
+}
+
+.becomeMember {
+  font-family: Satisfy;
+  color: #0099ff;
+  font-size: 58px;
+}
+
+.paragraph {
+  font-size: 25px;
+  color:white;
+  font-family: Bebas Neue;
+}
+
+.login_info {
+  font-family: Bebas Neue;
+  color:white;
+  font-size: 50px;
+}
+
+.patron_login {
+  font-family: Satisfy;
+  color:white;
+  font-size: 70px;
+}
+
+.patron_login_container {
+margin:50px 0px; padding:0px;
+text-align:center;
+align-content:center;
+}
+
+.notMember {
+  font-family: Bebas Neue;
+  color:white;
+  font-size: 30px;
+}
+
+.resort_login_container {
+  margin:50px 0px; padding:0px;
+  text-align:center;
+  align-content:center;
+}
+
+.resort_homepage {
+  font-family: Satisfy;
+  color:white;
+  font-size: 70px
+}
+
+.enter_resort_info {
+  font-family: Bebas Neue;
+  color:white;
+  font-size: 45px;
+}
+
+.patron_card {
+  text-align: center;
+  border: #659DBD solid 6px;
+  padding: 5px;
+  width: 200px;
+  height: 200px;
+  display: inline-grid;
+  margin: 25px;
+  box-shadow: 10px 10px #DAAD86, -10px -10px #8D8741;
+  color: #8D8741;
+}
+
+.welcome {
+  font-family: Satisfy;
+  font-size: 50px;
+}
+
+.home_container {
+  align-content: center;
+}
+

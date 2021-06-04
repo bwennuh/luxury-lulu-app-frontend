@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import FlightIcon from '@material-ui/icons/Flight';
 import {Link} from 'react-router-dom'
 
 function Navbar() {
@@ -22,11 +21,7 @@ function Navbar() {
                    </div>
                    <button onClick={()=>setShowLinks(!showLinks)}>
                    </button>
-                </div>   
-                <div className="rightSide">
-                < FlightIcon/>
-                Lulu Luxury Resorts 
-            </div>       
+                </div>        
            </div>
                 
             </>

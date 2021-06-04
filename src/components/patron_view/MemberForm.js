@@ -40,8 +40,8 @@ export default class MemberForm extends Component {
     return (
       <section className="form">
         <div>
-          <h2> Become a Lulu Luxury Member</h2>
-          <h4>Vacations should be easy, fun and unforgettable. More than a reward for hard work, they’re an opportunity to recharge, reconnect and remind each other what matters most. They’re fuel for a better life in between our moments away, because knowing another vacation is just around the corner keeps us going. That’s what a Lulu Luxury Resorts membership delivers. Our destinations, events and experiences help you make a habit of breaking from the routine. With access to a lifetime of entertainment and activities, you and your family can enjoy all that vacations offer over and over again.</h4>
+          <h2 className="becomeMember"> Become a Lulu Luxury Member</h2>
+          <h4 claddName="paragraph"> Vacations should be easy, fun and unforgettable. More than a reward for hard work, they’re an opportunity to recharge, reconnect and remind each other what matters most. They’re fuel for a better life in between our moments away, because knowing another vacation is just around the corner keeps us going. That’s what a Lulu Luxury Resorts membership delivers. Our destinations, events and experiences help you make a habit of breaking from the routine. With access to a lifetime of entertainment and activities, you and your family can enjoy all that vacations offer over and over again.</h4>
         </div>
         <form onSubmit={this.requestToServer} className="form-inline ml-4">
 

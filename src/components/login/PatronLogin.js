@@ -80,12 +80,12 @@ class PatronLogin extends Component {
 
   render() {
     return (
-      <div>
-        <h1>PATRON LOGIN PAGE</h1>
+      <div className="patron_login_container">
+        <h1 className="patron_login"> Welcome Back</h1>
 
         <div id="login-form">
 
-          <h1>Enter Login Info:</h1>
+          <h1 className="login_info"> Enter Login Info:</h1>
           <form onSubmit={this.submitHandler}>
 
             <input onChange={(event) => this.setState({ username: event.target.value })} type="text" placeholder="Enter your name" />
@@ -102,7 +102,7 @@ class PatronLogin extends Component {
 
           </form>
 
-          <h3>Not a member? Register below</h3>
+          <h3 className="notMember"> Not a member? Register below</h3>
           <MemberForm addmember = {this.props.addmember}/>
         </div>
 

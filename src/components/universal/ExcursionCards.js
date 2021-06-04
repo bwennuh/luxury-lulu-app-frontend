@@ -19,7 +19,7 @@ export const ExcursionCards = (props) => {
             <CardSubtitle>{props.excursion.excursion_type}</CardSubtitle>
           </CardBody>
           {/* <img width="100%" alt="" src={props.excursion.excursion_image_url} /> */}
-          <img style={{ alignSelf: 'center' }} width="1000px" alt="" src={props.excursion.excursion_image_url} />
+          <img className="excursion_img" style={{ alignSelf: 'center' }} width="1000px" alt="" src={props.excursion.excursion_image_url} />
           <CardBody>
             <CardText>{props.excursion.description}</CardText>
             <CardText>{props.excursion.most_popular}</CardText>

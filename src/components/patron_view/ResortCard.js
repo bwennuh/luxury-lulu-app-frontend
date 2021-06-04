@@ -48,7 +48,7 @@ export const ResortCard = (props) => {
   }
 
   return (
-      <div id={props.resort.id} className="resort-card">
+      <div id={props.resort.id} className="resort-card" style={{color: "blue"}}>
 
           <div className="resort-card-header">
             <h2 className="resort-card-title">{props.resort.resort_name}</h2>

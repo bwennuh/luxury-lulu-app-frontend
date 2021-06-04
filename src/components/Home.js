@@ -9,12 +9,14 @@ class Home extends Component {
 
   render(){
     return(
-      <div>
-        <h1>🌴 🐧  WELCOME TO LUXURY LULU 🐧 🌴 </h1>
+      <div className="home_container">
 
-        <Link to='/login'>
+      <Link to='/login'>
           <button>LOG IN</button>
         </Link>
+
+        <h1 className="welcome">🌴 🐧  Welcome to Lulu Luxury 🐧 🌴 </h1>
+
 
       </div>
     )
