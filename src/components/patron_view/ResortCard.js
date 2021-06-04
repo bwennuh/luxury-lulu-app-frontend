@@ -5,17 +5,33 @@ export const ResortCard = (props) => {
 
   const [resort, setResort] = useState(props.resort)
 
+
+  let handleDelete = (e) => {
+    fetch(`http://localhost:9292/bookings`, {
+        method: "PATCH",
+        headers: {
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            start_date: ""
+        })
+    })
+        .then(res => res.json())
+        .then((singleResort) => {
+            this.props.deleteRes(singleResort)
+        })
+}
+
+
   function checkBookedStatus(){
     if (props.booked === true){
       return(
       <div className="resort-card-footer">
-        <Link to='/patron-view-booked-resort-info'>
           <button className="edit-resort-booking-button">View/Edit Reservation</button>
           <br></br>
-          <button className="remove-resort-booking-button">Cancel Reservation</button>
+          <button onClick={handleDelete}>Cancel Reservation</button>
           <br></br>
           <button className="review-resort-button">Review Resort</button>
-        </Link>
       </div>
       )
     } else {
