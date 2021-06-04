@@ -96,17 +96,49 @@ class MainContainer extends Component {
     allPatrons: [...this.state.patrons, patron]
   })
 
-  deleteRes = (singleResort) => {
-    let updatedAvailability = this.state.allBookings.map(booking => {
-      if(booking.resort_id === singleResort.id){
-        return singleResort
-      } else {
-        return booking
-      }
-    })
+  // deleteRes = (singleResort) => {
+  //   let deletedBooking = this.state.loginPatronBookings.filter(booking => booking.resort_id !== singleResort.id)
 
-    (updatedAvailability)
-  }
+  //   alert("Your reservation has been cancelled.")
+
+  //   // deletedBooking[0].resort_id = 0
+  //   deletedBooking[0].patron_id = 0
+
+  //   console.log(deletedBooking)
+
+  // }
+
+  // deleteRes = (singleResort) => {
+  //   let updatedAvailability = this.state.allBookings.map(booking => {
+  //     if(booking.resort_id === singleResort.id){
+  //       return singleResort
+  //     } else {
+  //       return booking
+  //     }
+  //   })
+
+  //   (updatedAvailability)
+  // }
+
+  // deleteRes = (singleResort) => {
+  //   const resortBooking = this.state.loginPatronBookings.find(booking => booking.resort_id === singleResort.id )
+
+  //   const updatedBooking = {...resortBooking, start_date: "", end_date: ""}
+
+  //   const updatedBookingsArray = this.state.loginPatronBookings.map(booking => booking.resort_id === singleResort.id ? updatedBooking : booking)
+
+  //   const reqObj = {
+  //     headers: {"Content-Type": "application/json"},
+  //     method: "PATCH",
+  //     body: JSON.stringify(updatedBooking)
+  //   }
+
+  //   fetch(bookings_URL+updatedBooking.id, reqObj)
+  //     .then(r => r.json())
+  //     .then(() => this.setState({ loginPatronBookings: updatedBookingsArray}))
+
+  // }
+
 
   render() {
     return (

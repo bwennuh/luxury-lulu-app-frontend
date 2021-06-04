@@ -6,6 +6,14 @@ import ExcursionCardContainer from '../universal/ExcursionCardContainer'
 
 class Patron extends Component {
 
+  checkResorts = () => {
+    let updatedBookings = this.props.bookings.filter(booking => booking.patron_id !== 0)
+
+    console.log(updatedBookings)
+
+    return (updatedBookings)
+  }
+
   render(){
 
     return(
@@ -15,7 +23,10 @@ class Patron extends Component {
           <h1>PATRON PAGE</h1>
         </div>
 
-        <ResortCardContainer deleteRes={this.props.deleteRes} bookedResorts={this.props.bookedResorts} resorts={this.props.resorts} bookings={this.props.bookings}/>
+        {/* <ResortCardContainer patronId={this.props.patron.id} deleteRes={this.props.deleteRes} bookedResorts={this.props.bookedResorts} resorts={this.props.resorts} bookings={this.props.bookings} checkResorts={this.checkResorts} /> */}
+
+        <ResortCardContainer patronId={this.props.patron.id} deleteRes={this.props.deleteRes} bookedResorts={this.props.bookedResorts} resorts={this.props.resorts} bookings={this.checkResorts()} checkResorts={this.checkResorts} />
+
         <ExcursionCardContainer excursions={this.props.excursions} bookings={this.props.bookings} allBookings={this.props.allBookings}/>
 
       </div>
