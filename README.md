@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Welcome to Lulu Luxury!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img height="400" src="https://www.bjtonline.com/sites/bjtonline.com/files/styles/bjt30_article_large/public/time_tide-miavana-web.jpg?itok=itMq8Bd9&timestamp=1524495882"></img>
 
-## Available Scripts
+## About Lulu Luxury
 
-In the project directory, you can run:
+Lulu Luxury is a (fictional) vacation planning app for every person’s (or penguin’s) needs! This app is dedicated to Lulu the penguin from the Georgia aquarium.
 
-### `npm start`
+This app is a single page application that houses a React front end, and a Ruby backend.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Login
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The Lulu Luxury app is a resort vacation planning app that has two types of users in mind - the vacation resort goers themselves (in this case, known as the patrons or travelers), or the resorts (or rather, the assumed resort owners) themselves.
 
-### `npm test`
+At the top in the navigation bar, we have the option to click home at any time, or click to directly go to either the patron traveler login side or the resort log in side. But from the home page, users can just click on the “log in” button to continue.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There is both an option for the patron login or the resort login. Regardless of whether you're a patron or a resort loggin in, you’ll need to use your full name and your password.
 
-### `npm run build`
+If your name is not in our database, you’ll get an alert saying the information was not found, and have the option to try logging in again. Alternatively, if the user knows that they don’t have an account lined up, they can create one with the new member form at the bottom of the page.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Signing Up
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To become a Lulu Luxury Member, you’ll just need to sign up with your full name, age, as well as an email and phone number to reach you at.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once a new user has successfully signed up, they can go ahead and log in. The user should now get an alert that says the account has been found along with the reservations, and can click on “go to profile” to continue.
 
-### `npm run eject`
+## Patron Home Page
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Patron users can see that all of their upcoming resort stay reservations, as well as any previous resort stays they've had.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Further down the page, users can see the entire list of current resorts on our app, and their current availabilities for vacation stays. If a user wants to book another resort stay, they can click "Book reservation" and it will be added to their reservations list.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Underneath all of the resort information cards, users can also see the upcoming excursion reservations that the user has booked. The user can click on the “See excursion info” button to get a little popover that shows more details about the excursion.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Lastly, on the off-chance that a resort stay needs to be cancelled, the user can go back up to the upcoming reservations and click “cancel reservation”.
 
-## Learn More
+## Resort Home Page
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Resort profiles have the option to see all of the patrons that current have reservations booked for stays at the resort. The resort user can click on “see patron info” on each patron to see more information about them, including whether or not they've paid yet.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Underneath the patrons list, the resort can also see the excursions that are available to this resort specifically, and click on see excursion info to see the additional info about the excursion as well as the dates that excursions are currently booked for.
 
-### Code Splitting
+## Back-End
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to check out the back-end repo and current Lulu Luxury database <a href="https://github.com/bwennuh/luxury-lulu-app-backend/">here</a>.
