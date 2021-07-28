@@ -4,7 +4,6 @@ import { Card, CardText, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 import SoloPatron from './SoloPatron.js'
 
 export const PatronCard = (props) => {
-
   return (
 
     <div className="patron_card">
